@@ -18,7 +18,7 @@ wget --content-disposition https://bit.ly/module-make
 
 ## Usage
 
-In your primary makefile, add the following lines to install [`jeffhung/python.make`](http://github.com/jeffhung/python.make) via `module.make`.
+In your primary makefile, add the following lines to install [`jeffhung/python.make`](http://github.com/jeffhung/python.make) from github via `module.make`.
 
 ```make
 .PHONY: all
@@ -34,13 +34,13 @@ Or if you want to customize the file name:
 include $(call module,jeffhung/python.make,python2.make)
 ```
 
-Or the url to the file directly:
+Or if the file is hosted in elsewhere other than github, you need to use the url to the file directly:
 
 ```make
 include $(call module,https://raw.githubusercontent.com/jeffhung/python.make/master/python.make)
 ```
 
-Or if the file is hosted in somewhere else other than github:
+Or with the customized file name, if the last part of the url is not a proper name:
 
 ```make
 include $(call module,https://bit.ly/python-make,python.make)
