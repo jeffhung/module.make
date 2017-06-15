@@ -7,13 +7,13 @@ Copy the `module.make` file into the same folder with your primary makefile.
 Or download with [curl](http://curl.haxx.se/) directly:
 
 ```console
-$ curl -L -o module.make https://bit.ly/module-make
+curl -L -o module.make https://bit.ly/module-make
 ```
 
 Or with [wget](https://www.gnu.org/software/wget/):
 
 ```console
-$ wget --content-disposition https://bit.ly/module-make
+wget --content-disposition https://bit.ly/module-make
 ```
 
 ## Usage
@@ -31,30 +31,18 @@ include $(call module,jeffhung/python.make)
 Or if you want to customize the file name:
 
 ```make
-.PHONY: all
-all:
-
-include module.make
 include $(call module,jeffhung/python.make,python2.make)
 ```
 
 Or the url to the file directly:
 
 ```make
-.PHONY: all
-all:
-
-include module.make
 include $(call module,https://raw.githubusercontent.com/jeffhung/python.make/master/python.make)
 ```
 
 Or if the file is hosted in somewhere else other than github:
 
 ```make
-.PHONY: all
-all:
-
-include module.make
 include $(call module,https://bit.ly/python-make,python.make)
 ```
 
