@@ -46,7 +46,7 @@ Or with the customized file name, if the last part of the url is not a proper na
 include $(call module,https://bit.ly/python-make,python.make)
 ```
 
-When running `make`, `python.make` will be downloaded automatically only in first time.
+When running `make`, `python.make` will be downloaded automatically only at the first time.
 
 ```console
 $ make
